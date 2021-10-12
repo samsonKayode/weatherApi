@@ -1,0 +1,21 @@
+server:
+  port: 4500
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: weatherApp
+
+  redis:
+    host: localhost
+    port: 6379
+
+  cache:
+    redis:
+      time-to-live: 864000000
+      cache-names: weatherApi
+
+weatherApi:
+  api:
+    id: ${API_KEY:1895ece1e8bbddd1eb2409cf9a633c99}
